@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>chat en node js </title>
+  <!-- bootstrap css-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+  <div class="container">
+    
+    <div class="page-header">
+
+      <h1>NodeChat <small>alberto gonzalez novella</small></h1>  
+    </div>
+    
+    <div id="nickContainer" class="input-group">
+      <input type="text" id="nickname" class="form-control input-lg" placeholder="Enter your nickname">
+      <span class="input-group-btn">
+        <button id="setNick" class="btn btn-lg btn-primary" type="submit" >OK!</button>
+      </span>
+    </div>
+    <div class="alert fade in alert-danger alert-dismissible" role="alert" id="login-error">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="closeAlert"> Close </button>
+      <strong>That username is already taken.Try again.</strong>
+    </div>
+    <div class="alert fade in alert-danger alert-dismissible" role="alert" id="login-error-name">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="closeAlert"> Close </button>
+      <strong>Please use a valid username.Try again.</strong>
+    </div>
+
+
+    <div id="content" class="row">
+      <div class="col-md-2"></div>
+      
+      <div id="chatContent" class="col-md-6">
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            Chat
+          </div>
+          <div id="chat" class="panel-body"></div>
+        </div>
+        
+        <div> 
+          <form id="sendMessage" class="input-group" action="">
+            <input id="message" type="text" class="form-control input-lg">
+            <span class="input-group-btn">
+              <button id="botonEnviar" class="btn btn-lg btn-primary" type="submit">Send!</button>
+            </span>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-2">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            Users connected
+            <span id="numberConnected"></span>
+          </div>
+          <div id="users" class="panel-body"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  
+  <!-- jquery -->
+  <script src="lib/jquery-min.js"></script>
+  <!-- bootstrap -->
+  <script src="lib/bootstrap.js"></script>
+  <!-- socket.io  -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

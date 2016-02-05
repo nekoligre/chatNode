@@ -1,0 +1,13 @@
+#chat{
+  height: 350px;
+  overflow-y:scroll;
+}
+#content{
+  display:none;
+}
+#login-error{
+  display: none;
+}
+#login-error-name{
+  display:none;
+}

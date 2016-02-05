@@ -1,0 +1,11 @@
+{
+  "name": "chatnodejs",
+  "version": "0.1.0",
+  "description": "chat desarrollado en node",
+  "main": "app.js",
+  "author": "Alberto gonzalez novella",
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.7"
+  }
+}
