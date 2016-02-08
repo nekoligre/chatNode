@@ -6,7 +6,10 @@ var countUser = 0;
     
 app.use(express.static(__dirname + '/www'));
 
-var server = app.listen(8000,function(){
+var port = process.env.PORT || 5000;
+
+
+var server = app.listen(port,function(){
   var port = server.address().port;
   console.log('listen on :' + port);
 });
